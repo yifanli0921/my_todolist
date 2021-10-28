@@ -1,28 +1,69 @@
+<!--<template>-->
+<!--    <img alt="Vue logo" src="./assets/logo.png">-->
+<!--    <Header id="app"/>-->
+<!--</template>-->
+
+<!--<script>-->
+<!--import Header from "./components/Header.vue"-->
+<!--export default {-->
+<!--  name: 'App',-->
+<!--  components: {-->
+<!--    Header,-->
+<!--  }-->
+<!--}-->
+<!--</script>-->
+
+<!--<style>-->
+<!--.app {-->
+<!--  font-family: Avenir, Helvetica, Arial, sans-serif;-->
+<!--  -webkit-font-smoothing: antialiased;-->
+<!--  -moz-osx-font-smoothing: grayscale;-->
+<!--  text-align: center;-->
+<!--  color: #2c3e50;-->
+<!--  margin-top: 60px;-->
+<!--}-->
+<!--#Header {-->
+
+<!--}-->
+<!--</style>-->
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="container">
+    <img src="./assets/logo.png" class="logo">
+    <todo-list></todo-list>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TodoItem from './components/TodoItem.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TodoItem,
   }
 }
 </script>
 
 <style>
+*{
+  box-sizing: border-box;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
+.logo {
+  display: block;
+  margin: 20px auto;
+  height: 75px;
+}
 </style>
+
